@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="www.pranishpoudel.com.np" />
+    <meta property="og:title" content="Portfolio about Pranish Poudel" />
+    <meta property="og:description" content="Learn More about me." />
+    <meta property="og:image" content="image.jpg"/>
+    <title>PranishPoudel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo1.png">
+</head>
+<body>
+    <img src="me.jpg" style="border-radius: 25% !important;" width="200px" >
+    <div class="name">Hey,&nbsp;<span id="typing"></span><span class="cursor"></span></div> 
+    <div class="main">
+    I'm a 17-year-old tech enthusiast who's always glued to the screen! When I'm not binging on the latest tech news, 
+    you'll find me doodling on my notebook or tinkering with web designs. I'm like a computer wizard, but with a
+    love for art and creativity! So if you need a website that looks as cool as it functions, I'm your guy!
+    </div>
+    <div class="con">Shoot me a message!</div>
+    <div class="icon">
+        <a href="https://www.facebook.com/pranish.0" target="_blank" class="icon"><img src="fb.png" width="45"></a>
+        <a href="https://www.instagram.com/pranisho_0/" target="_blank"class="icon"><img src="insta.png" width="60"></a>
+        <a href="mailto:pranishpoudel02@gmail.com" target="_blank"class="icon"><img src="gmail.png" width="45"></a>
+      </div>
+      <script>
+        const name = document.getElementById('typing');
+        const text = "It's me Pranish !";
+        let index = 0;
+        function typing() {
+            if (index < text.length) {
+                name.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typing, 200);
+            }
+           //  name.innerHTML += '';
+        }
+        typing();
+     </script>
+</body>
+</html>
+
+
+<!--Changes made by Pranish Poudel-->
