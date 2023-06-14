@@ -1,51 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Links -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url" content="www.pranishpoudel.com.np" />
-    <meta property="og:title" content="Portfolio about Pranish Poudel" />
+    <meta property="og:title" content="Porfolio about Pranish Poudel" />
     <meta property="og:description" content="Learn More about me." />
-    <meta property="og:image" content="image.jpg"/>
+
+    <!--  -->
     <title>Pranish Poudel</title>
+
+    <!-- Links -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="logo1.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
-    <img src="me.jpg" style="border-radius: 25% !important;" width="200px" >
-    <div class="name">Hey ,&nbsp;<span id="typing"></span><span class="cursor"></span></div> 
-    <div class="main">
-    I'm a 17-year-old tech enthusiast who's always glued to the screen! When I'm not binging on the latest tech news, 
-    you'll find me doodling on my notebook or tinkering with web designs. I'm like a computer wizard, but with a
-    love for art and creativity! So if you need a website that looks as cool as it functions, I'm your guy!
-    </div>
-    <div class="con">Shoot me a message!</div>
-    <div class="icon">
-        <a href="https://www.facebook.com/pranish.0" target="_blank" class="icon"><img src="fb.png" width="45"></a>
-        <a href="https://www.instagram.com/pranisho_0/" target="_blank"class="icon"><img src="insta.png" width="60"></a>
-        <a href="mailto:pranishpoudel02@gmail.com" target="_blank"class="icon"><img src="gmail.png" width="45"></a>
-      </div>
-      <script>
-        const name = document.getElementById('typing');
-        const text = "It's me Pranish !";
+
+    <header class="header">
+        <a href="#" class="logo">Pranish.</a>
+    </header>
+
+    <!-- Home Section Design -->
+    <section class="home show-animate" id="home" >
+
+        <div class="home-img1" style="display: none;">
+            <img src="" alt="me">
+            <span class="circle-spin"></span>
+        </div>
+        
+        <div class="home-content">
+            <div class="home-content">
+                <h1><div class="name"><span id="typing"></span><span class="cursor"></span><span class="animate" style="--i:2;"></span></div></h1>
+                <div class="text-animate">
+                    <h3>Frontend Developer</h3>
+                    <span class="animate" style="--i:3;"></span>
+                </div>
+                <p>
+                    I'm an enthusiastic <span style="color: #00abf0;">Frontend Developer</span> with skills in 
+                        <span style="font-size: 1.8rem; color:rgb(255, 99, 71);"><i>HTML</i>,</span> 
+                        <span style="font-size: 1.8rem; color:#2965f1;"><i>CSS</i>,</span> 
+                        <span style="font-size: 1.8rem; color:#f0db4f;"><i></i>Java<span style="font-size: 1.8rem; color: #61635d;">Script</span>
+                        </span> </i>
+                        and <span style="color:#61DBFB;"><i>React</i></span>. 
+                        I am passionate about designing functional user interfaces and enjoy collaborating and problem-solving to deliver exceptional results. 
+                        I am always eager to take on new challenges and push the boundaries of what is possible with <span style=" color: #00abf0;">frontend development</span>.</p>
+                <div class="btn-box animated">
+                    <a class='btn' href="#">Hire Me</a>
+                    <a class='btn' href="/contact.html">Let's Talk</a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="home-img">
+            <img src="" alt="me">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com/pranish.0"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://www.instagram.com/pranisho_0/"><i class='bx bxl-instagram' ></i></a>
+            <a href="mailto:pranishpoudel02@gmail.com"><i class='bx bxl-gmail' ></i></a>
+        </div>
+
+        <span class="home-imgHover"></span>
+
+    </section>
+
+
+    <script>
+        const nam = document.getElementById('typing');
+        const text = "Hey, I'm Pranish Poudel.";
         let index = 0;
+
         function typing() {
             if (index < text.length) {
-                name.innerHTML += text.charAt(index);
+                nam.innerHTML += text.charAt(index);
                 index++;
-                setTimeout(typing, 200);
+                setTimeout(typing, 75);
             }
-           //  name.innerHTML += '';
+            //  name.innerHTML += '';
         }
-        typing();
-     </script>
+        setTimeout(typing, 650);
+    </script>
+    
 </body>
 </html>
-
-
-<!--Changes made by Pranish Poudel-->
