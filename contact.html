@@ -16,13 +16,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo1.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/9951506116.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
 
     <!-- header design -->
-    <header class="header">
-        <a href="/index.html" class="logo">Pranish.</a>
+    <header class="header" style="background: transparent !important;">
+        <a href="/index.html" class="contact-logo">Pranish.</a>
 
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
@@ -36,38 +38,68 @@
             <span class="contact-circle-spin"></span>
         </div>
 
-        <form action="/submit.js" method="post">
+        <form action="https://formsubmit.co/el/vomeke" method="POST" id="myForm">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input id="clientName" type="text" placeholder="Full Name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input id="clientEmail" type="email" placeholder="Email Address" required>
                     <span class="focus"></span>
                 </div>
             </div>
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input id="clientNumber" type="number" placeholder="Mobile Number" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input id="clientSubject" type="text" placeholder="Email Subject" required>
                     <span class="focus"></span>
                 </div>
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea id="clientMessage" name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
             </div>
 
             <div class="btn-box btns">
-                <button class="cont-btn type1" type="submit">Submit</button>
+                <button class="cont-btn type1" id="co-Btn" type="submit">Submit
+                </button>
             </div>
         </form>
     </section>
-    
+
+    <script>
+        const submitButton = document.getElementById('co-Btn');
+        const form = document.getElementById('myForm');
+
+        submitButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // sendMail();
+            const inputFields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="number"], input[type="email"], textarea#message');
+            let isValid = true;
+
+            inputFields.forEach(function(input) {
+                if (!input.value.trim()) {
+                isValid = false;
+                // Perform additional validation if needed
+                }
+                // Additional validation logic for each input field
+            });
+
+            if (isValid) {
+                this.classList.add('submitted');
+                setTimeout(() => {
+                this.classList.remove('submitted');
+                form.reset();
+                }, 2500); // 5000 milliseconds = 5 seconds
+            }
+        });
+    </script>
+
 </body>
 </html>
